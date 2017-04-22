@@ -42,3 +42,8 @@ pip install --no-cache-dir --user numpy scipy matplotlib ipython jupyter pandas 
 
 ### 3.运行versioncheck.py,检查版本统一
 RT
+
+## 题目
+[腾讯官网](http://algo.tpai.qq.com/home/information/index.html)  
+每组数据有以下6维度：clickTime，creativeID，userID，positionID，connectionType，telecomsOperator  
+总之超麻烦，大家加油吧
