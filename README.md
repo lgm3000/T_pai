@@ -22,8 +22,11 @@ Project for Tencent Machine Learning Contest
   
 ## 安装教程  
 
+### 0.为什么不用用ubuntu呢?
+推荐使用oracle的[virtualbox](https://www.virtualbox.org/wiki/Downloads)安装虚拟系统[ubuntu-kylin](https://www.ubuntu.com/download/ubuntu-kylin)/[ubuntu](https://www.ubuntu.com/download/desktop)
+
 ### 1.安装python2.7
-百度
+百度一下呗
 
 ### 2.安装各式lib
 [官网](https://www.scipy.org/install.html)  
@@ -41,9 +44,9 @@ pip install --no-cache-dir --user numpy scipy matplotlib ipython jupyter pandas 
 '''
 
 ### 3.运行versioncheck.py,检查版本统一
-RT
 
 ## 题目
 [腾讯官网](http://algo.tpai.qq.com/home/information/index.html)  
 每组数据有以下6维度：clickTime，creativeID，userID，positionID，connectionType，telecomsOperator  
+其中 用户,素材,广告位 分别有自己的特征  
 总之超麻烦，大家加油吧
