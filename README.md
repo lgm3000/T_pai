@@ -4,12 +4,12 @@ Project for Tencent Machine Learning Contest
 
 
 ## 环境要求
-*python2.7
-*scipy
-*numpy
-*matplotlib
-*pandas
-*sklearn
+*python2.7  
+*scipy  
+*numpy  
+*matplotlib  
+*pandas  
+*sklearn  
 
 ## lib版本
 安装后，运行versioncheck.py
