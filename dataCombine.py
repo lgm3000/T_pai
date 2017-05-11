@@ -7,10 +7,16 @@ dir_path = ld.dir_path
 
 train = ld.load('train.csv')
 
-userFeatures = ld.load('user.csv')
+usr = ld.load('user.csv')
+pos = ld.load('position.csv')
 
-data = pd.merge(train.head, userFeatures, on=['userID'], how='left')
+train = pd.merge(train.head(100), usr, on=['userID'], how='left')
+train = pd.merge(train, pos, on=['positionID'], how='left')
 
-print data.head(10)																											
+del train['userID']
+del train['positionID']
 
-#data.to_csv(r'data.csv', encoding='gbk')
+print train.head(10)																											
+dira = dir_path + '/data.csv'
+print(dira)
+train.to_csv(dira, encoding='gbk')
