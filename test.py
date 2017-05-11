@@ -22,14 +22,13 @@ X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size=0.2)
 clf = LogisticRegression()
 clf.fit(X_train, Y_train)
 result = clf.predict(X_test)
-print classification_report(Y_test, result)
-print 'score Scikit learn: ', clf.score(X_test,Y_test)
+#print classification_report(Y_test, result)
+#print 'score Scikit learn: ', clf.score(X_test,Y_test)
 
-pre = clf.predict_proba(Y)
+pre = clf.predict_proba(X_test)
 output = pd.DataFrame(pre)
-output.index = Y.index
-output.columns= ['0', 'probability']
+output.columns= ['0', 'prob']
 output.drop('0',axis = 1, inplace = True)
-print output.head(5)
-
+output = output.assign(label=pd.DataFrame(Y_test)) 
+print(output)
 output.to_csv('output.csv')
