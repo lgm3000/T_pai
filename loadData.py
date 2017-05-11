@@ -12,35 +12,35 @@ filenames = ['user.csv',
 'position.csv']
 
 def load(filename):
-	reader = pd.read_csv(filename)
+	reader = pd.read_csv(dir_path + '/pre/' + filename)
 	return reader
 	
-def loadAll():
+def All():
 	readers = {}
 	j = 0
 	for i in filenames:
-		readers[i] = load(dir_path + '/pre/' + i)
+		readers[i] = load(i)
 		j += 1
 	return readers
 	
-def loadUser():
+def User():
 	return load('user.csv')
-def loadUserAppInstal():
+def UserAppInstal():
 	return load('user_installedapps.csv')
-def loadUserAppAction():
+def UserAppAction():
 	return load('user_app_actions.csv')
-def loadAppCat():
+def AppCat():
 	return load('app_categories.csv')
-def loadAd():
+def Ad():
 	return load('ad.csv')
-def loadPos():
+def Pos():
 	return load('position.csv')
 
 
 if __name__ == "__main__":
 	#readall exceeds memory limit on my VM; could be
 	#runnable on better settings
-	readahs = loadAll()
+	readahs = All()
 
 	for readah in readahs:
 		print(readah.head(10).to_string())
